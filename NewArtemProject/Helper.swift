@@ -7,16 +7,18 @@
 
 import Foundation
 
+let newPersonHelper = Helper()
 
-let personDelegate = Person()
-
-class Person: ViewController{
-   
-    let nameUser = "Артем"
-    let surNameUser = "Пешков"
+class Helper{
+    private var personBookArray: [Person] = []
     
-    var fullNameUser: String {
-        "\(nameUser) \(surNameUser)"
+    func getAppendPerson(name: String, surName: String){
+        let newPerson = Person(nameUser: name, surNameUser: surName)
+        personBookArray.append(newPerson)
+    }
+    
+    func getPersonList() -> [Person]{
+        personBookArray
     }
     
 }
