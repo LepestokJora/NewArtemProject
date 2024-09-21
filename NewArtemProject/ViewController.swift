@@ -9,14 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    private let helper = newPersonHelper
+    private let helper = Helper()
     private let person = Person(nameUser: "Артем", surNameUser: "Пешков")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Меня зовут \(person.fullNameUser), я создал свое первое приложение")
-        helper.getAppendPerson(name: "Андрей", surName: "Сомов")
-        helper.getAppendPerson(name: "Боб", surName: "Губка")
+        helper.getAppendPerson(Person(nameUser: "Андрей", surNameUser: "Сомов"))
+        helper.getAppendPerson(Person(nameUser: "Боб", surNameUser: "Губка"))
         
         getPrintPerson()
         
@@ -32,23 +32,6 @@ class ViewController: UIViewController {
 }
 
 
-class Person{
-   
-    let nameUser: String
-    let surNameUser: String
-
-    var fullNameUser: String {
-        "\(nameUser) \(surNameUser)"
-    }
-    
-    
-    init(nameUser: String, surNameUser: String) {
-        self.nameUser = nameUser
-        self.surNameUser = surNameUser
-        
-    }
-
-}
 
 
 

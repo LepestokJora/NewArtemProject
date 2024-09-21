@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED9912E32C9F57D7005FC795 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9912E22C9F57D7005FC795 /* Person.swift */; };
 		EDBDFFA62C976986003CBD5D /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBDFFA52C976986003CBD5D /* Helper.swift */; };
 		EDC13E3E2C94BFE600602110 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC13E3D2C94BFE600602110 /* AppDelegate.swift */; };
 		EDC13E402C94BFE600602110 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC13E3F2C94BFE600602110 /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED9912E22C9F57D7005FC795 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		EDBDFFA52C976986003CBD5D /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		EDC13E3A2C94BFE600602110 /* NewArtemProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewArtemProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDC13E3D2C94BFE600602110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				EDC13E3F2C94BFE600602110 /* SceneDelegate.swift */,
 				EDC13E412C94BFE600602110 /* ViewController.swift */,
 				EDBDFFA52C976986003CBD5D /* Helper.swift */,
+				ED9912E22C9F57D7005FC795 /* Person.swift */,
 				EDC13E432C94BFE600602110 /* Main.storyboard */,
 				EDC13E462C94BFE800602110 /* Assets.xcassets */,
 				EDC13E482C94BFE800602110 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED9912E32C9F57D7005FC795 /* Person.swift in Sources */,
 				EDC13E422C94BFE600602110 /* ViewController.swift in Sources */,
 				EDC13E3E2C94BFE600602110 /* AppDelegate.swift in Sources */,
 				EDC13E402C94BFE600602110 /* SceneDelegate.swift in Sources */,
