@@ -8,7 +8,7 @@
 import Foundation
 
 
-class Person{
+struct Person{
    
     let nameUser: String
     let surNameUser: String
@@ -24,4 +24,17 @@ class Person{
         
     }
 
+}
+
+struct User{
+    
+    let login = "Gerd"
+    let password = 123
+    let userData: Person
+    
+    init(userData: Person) {
+        self.userData = userData
+    }
+    
+   
 }

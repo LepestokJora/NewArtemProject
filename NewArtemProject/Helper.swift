@@ -8,13 +8,13 @@
 import Foundation
 
 class Helper{
-    private var personBookArray: [Person] = []
+    private var personBookArray: [User] = []
     
-    func getAppendPerson(_ newPerson: Person){
+    func getAppendPerson(_ newPerson: User){
         personBookArray.append(newPerson)
     }
     
-    func getPersonList() -> [Person]{
+    func getPersonList() -> [User]{
         personBookArray
     }
     

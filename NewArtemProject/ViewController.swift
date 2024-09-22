@@ -8,16 +8,19 @@ import Foundation
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     private let helper = Helper()
-    private let person = Person(nameUser: "Артем", surNameUser: "Пешков")
+    private let person = User(userData: Person(nameUser: "Артем", surNameUser: "Пешков"))
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Меня зовут \(person.fullNameUser), я создал свое первое приложение")
-        helper.getAppendPerson(Person(nameUser: "Андрей", surNameUser: "Сомов"))
-        helper.getAppendPerson(Person(nameUser: "Боб", surNameUser: "Губка"))
+        print("Меня зовут \(person.userData.fullNameUser), я создал свое первое приложение")
         
+        helper.getAppendPerson(User(userData: Person(nameUser: "Сквидвард",
+                                                     surNameUser: "Тентаклс")))
+        
+        helper.getAppendPerson(User(userData: Person(nameUser: "Боб",
+                                                     surNameUser: "Губка")))
         getPrintPerson()
         
         
@@ -25,10 +28,9 @@ class ViewController: UIViewController {
     
     private func getPrintPerson(){
         for person in helper.getPersonList(){
-            print(person.fullNameUser)
+            print(person.userData.fullNameUser)
         }
     }
-    
 }
 
 
