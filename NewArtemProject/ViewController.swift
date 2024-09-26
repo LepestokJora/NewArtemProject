@@ -16,14 +16,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         print("Меня зовут \(person.userData.fullNameUser), я создал свое первое приложение")
         
+        
+        getPrintPerson()
+        getHelper()
+        
+    }
+    
+    private func getHelper(){
         helper.getAppendPerson(User(userData: Person(nameUser: "Сквидвард",
                                                      surNameUser: "Тентаклс")))
         
         helper.getAppendPerson(User(userData: Person(nameUser: "Боб",
                                                      surNameUser: "Губка")))
-        getPrintPerson()
-        
-        
     }
     
     private func getPrintPerson(){

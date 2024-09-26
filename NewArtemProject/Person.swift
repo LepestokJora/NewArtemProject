@@ -28,8 +28,8 @@ struct Person{
 
 struct User{
     
-    let login = "Gerd"
-    let password = 123
+    var login = "Gerd"
+    var password = 123
     let userData: Person
     
     init(userData: Person) {
