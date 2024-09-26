@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     }
     
     private func getHelper(){
+        
         helper.getAppendPerson(User(userData: Person(nameUser: "Сквидвард",
                                                      surNameUser: "Тентаклс")))
         
