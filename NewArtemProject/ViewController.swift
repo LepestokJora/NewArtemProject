@@ -10,25 +10,27 @@ import UIKit
 class ViewController: UIViewController {
     
     private let helper = Helper()
-    private let person = User(userData: Person(nameUser: "Артем", surNameUser: "Пешков"))
+    private let userRepositary = UserRepositary()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Меня зовут \(person.userData.fullNameUser), я создал свое первое приложение")
         
         
+        view.backgroundColor = .green
+        view.alpha = 0.1
+        
+       
         getPrintPerson()
         getHelper()
         
     }
     
     private func getHelper(){
-        
-        helper.getAppendPerson(User(userData: Person(nameUser: "Сквидвард",
-                                                     surNameUser: "Тентаклс")))
-        
-        helper.getAppendPerson(User(userData: Person(nameUser: "Боб",
-                                                     surNameUser: "Губка")))
+        let user = userRepositary.getBackUserArray()
+        helper.getAddUser(user)
+        _ = helper.getPersonList()
+
     }
     
     private func getPrintPerson(){
@@ -37,9 +39,4 @@ class ViewController: UIViewController {
         }
     }
 }
-
-
-
-
-
 

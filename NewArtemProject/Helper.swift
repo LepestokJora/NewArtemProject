@@ -18,6 +18,25 @@ class Helper{
         personBookArray
     }
     
+    func getAddUser(_ newUsers: [User]) {
+        personBookArray.append(contentsOf: newUsers)
+        
+    }
+    
 }
 
-
+class UserRepositary{
+    
+    func getBackUserArray() -> [User]{
+        
+        let users = [User(userData: Person(nameUser: "Сквидвард", surNameUser: "Тентаклс")),
+                     User(userData: Person(nameUser: "Боб", surNameUser: "Губка"))
+        ]
+        
+        return users
+        
+        
+    }
+    
+    
+}

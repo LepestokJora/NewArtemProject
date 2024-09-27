@@ -16,23 +16,18 @@ struct Person{
     var fullNameUser: String {
         "\(nameUser) \(surNameUser)"
     }
-    
-    
-    init(nameUser: String, surNameUser: String) {
-        self.nameUser = nameUser
-        self.surNameUser = surNameUser
-        
-    }
 
 }
 
 struct User{
     
-    var login = "Gerd"
-    var password = 123
+    let login: String
+    let password: Int
     let userData: Person
     
-    init(userData: Person) {
+    init(login: String = "", password: Int = 1, userData: Person) {
+        self.login = login
+        self.password = password
         self.userData = userData
     }
     
