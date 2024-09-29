@@ -9,14 +9,13 @@ import Foundation
 
 
 struct Person{
-   
+    
     let nameUser: String
     let surNameUser: String
-
+    
     var fullNameUser: String {
         "\(nameUser) \(surNameUser)"
     }
-
 }
 
 struct User{
@@ -30,6 +29,4 @@ struct User{
         self.password = password
         self.userData = userData
     }
-    
-   
 }

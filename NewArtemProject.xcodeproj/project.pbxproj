@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ED9912E32C9F57D7005FC795 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9912E22C9F57D7005FC795 /* Person.swift */; };
+		ED9913292CA89187005FC795 /* UserRepositary.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9913282CA89187005FC795 /* UserRepositary.swift */; };
 		EDBDFFA62C976986003CBD5D /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBDFFA52C976986003CBD5D /* Helper.swift */; };
 		EDC13E3E2C94BFE600602110 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC13E3D2C94BFE600602110 /* AppDelegate.swift */; };
 		EDC13E402C94BFE600602110 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC13E3F2C94BFE600602110 /* SceneDelegate.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		ED9912E22C9F57D7005FC795 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		ED9913282CA89187005FC795 /* UserRepositary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositary.swift; sourceTree = "<group>"; };
 		EDBDFFA52C976986003CBD5D /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		EDC13E3A2C94BFE600602110 /* NewArtemProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewArtemProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDC13E3D2C94BFE600602110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				EDC13E412C94BFE600602110 /* ViewController.swift */,
 				EDBDFFA52C976986003CBD5D /* Helper.swift */,
 				ED9912E22C9F57D7005FC795 /* Person.swift */,
+				ED9913282CA89187005FC795 /* UserRepositary.swift */,
 				EDC13E462C94BFE800602110 /* Assets.xcassets */,
 				EDC13E482C94BFE800602110 /* LaunchScreen.storyboard */,
 				EDC13E4B2C94BFE800602110 /* Info.plist */,
@@ -144,6 +147,7 @@
 				EDC13E422C94BFE600602110 /* ViewController.swift in Sources */,
 				EDC13E3E2C94BFE600602110 /* AppDelegate.swift in Sources */,
 				EDC13E402C94BFE600602110 /* SceneDelegate.swift in Sources */,
+				ED9913292CA89187005FC795 /* UserRepositary.swift in Sources */,
 				EDBDFFA62C976986003CBD5D /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
