@@ -12,20 +12,24 @@ class ViewController: UIViewController {
     private let helper = Helper()
     private let userRepositary = UserRepositary()
     private let textLabel = UILabel()
+    private let batton = UIButton()
+    private let stackView = UIStackView()
     
-    let users: [User] = []
-   
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .green
         
-        setupLabel()
-        view.addSubview(textLabel)
-        view.addSubview(setupButton)
-        
         getHelper()
+        setupLabel()
         getPrintPerson()
+        setupButton()
+        setupStackView()
+        
+        view.addSubview(stackView)
+        setupLayout()
     }
     
     private func getHelper() {
@@ -40,20 +44,45 @@ class ViewController: UIViewController {
     }
     
     private func setupLabel() {
-        let userRandomArray = users.randomElement()
+        let userRandomArray = userRepositary.getBackUserArray().randomElement()
         
         textLabel.font = .systemFont(ofSize: 25)
-        textLabel.textColor = .blue
-        textLabel.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
+        textLabel.textColor = .black
+        textLabel.textAlignment = .center
+        textLabel.backgroundColor = .blue
+        textLabel.layer.cornerRadius = 10
+        textLabel.clipsToBounds = true
         textLabel.text = "\(userRandomArray?.userData.fullNameUser ?? "Defaut")"
     }
     
-    private let setupButton: UIButton = {
-        let batton = UIButton()
+    private func setupButton() {
         batton.setTitle("Show FullName", for: .normal)
-        batton.backgroundColor = .green
-        batton.frame = .init(x: 100, y: 150, width: 150, height: 50)
-        return batton
-    }()
+        batton.backgroundColor = .blue
+        batton.layer.cornerRadius = 10
+    }
+    
+    private func setupStackView() {
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.alignment = .center
+        stackView.spacing = 10
+        
+        stackView.addArrangedSubview(textLabel)
+        stackView.addArrangedSubview(batton)
+    }
+    
+    private func setupLayout() {
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        textLabel.translatesAutoresizingMaskIntoConstraints = false
+        batton.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 300),
+            stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -300),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 80),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -80)
+        ])
+    }
 }
 
