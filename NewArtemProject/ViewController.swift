@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     private let textLabel = UILabel()
     private let batton = UIButton()
     private let stackView = UIStackView()
-    
+    private var redButton = CustomUIButton(hasShadow: false)
+    private var greenButton = CustomUIButton(hasShadow: true)
     
     
     override func viewDidLoad() {
@@ -56,6 +57,8 @@ class ViewController: UIViewController {
     }
     
     private func setupButton() {
+        redButton.setTitle("Show New User", for: .normal)
+        greenButton.setTitle("Hide User", for: .normal)
         batton.setTitle("Show FullName", for: .normal)
         batton.backgroundColor = .blue
         batton.layer.cornerRadius = 10
@@ -69,6 +72,8 @@ class ViewController: UIViewController {
         
         stackView.addArrangedSubview(textLabel)
         stackView.addArrangedSubview(batton)
+        stackView.addArrangedSubview(redButton)
+        stackView.addArrangedSubview(greenButton)
     }
     
     private func setupLayout() {
