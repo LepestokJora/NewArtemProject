@@ -10,7 +10,7 @@ import UIKit
 
 class CustomUIButton: UIButton {
     
-    var hasShadow: Bool 
+    var hasShadow: Bool
     
     init(hasShadow: Bool) {
         self.hasShadow = hasShadow
@@ -36,6 +36,22 @@ class CustomUIButton: UIButton {
         layer.cornerRadius = 10
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let shadowPatch = UIBezierPath(rect: bounds)
+        layer.shadowPath = shadowPatch.cgPath
+    }
+}
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
 //    override func layoutSubviews() {
 //        super.layoutSubviews()
 //        if hasShadow {
@@ -45,4 +61,4 @@ class CustomUIButton: UIButton {
 //            self.layer.shadowRadius = 4
 //        }
 //    }
-}
+
