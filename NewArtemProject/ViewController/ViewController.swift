@@ -45,6 +45,8 @@ class ViewController: UIViewController {
     }
     
     private func setupButton() {
+        redButton.backgroundColor = .red
+        greenButton.backgroundColor = .green
         redButton.setTitle("Show New User", for: .normal)
         greenButton.setTitle("Hide User", for: .normal)
         batton.setTitle("Show FullName", for: .normal)
