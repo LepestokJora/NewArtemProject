@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .green
+        view.backgroundColor = .gray
         
         getHelper()
         setupLabel()
@@ -44,18 +44,6 @@ class ViewController: UIViewController {
         }
     }
     
-    private func setupLabel() {
-        let userRandomArray = userRepositary.getBackUserArray().randomElement()
-        
-        textLabel.font = .systemFont(ofSize: 25)
-        textLabel.textColor = .black
-        textLabel.textAlignment = .center
-        textLabel.backgroundColor = .blue
-        textLabel.layer.cornerRadius = 10
-        textLabel.clipsToBounds = true
-        textLabel.text = "\(userRandomArray?.userData.fullNameUser ?? "Defaut")"
-    }
-    
     private func setupButton() {
         redButton.setTitle("Show New User", for: .normal)
         greenButton.setTitle("Hide User", for: .normal)
@@ -64,19 +52,41 @@ class ViewController: UIViewController {
         batton.layer.cornerRadius = 10
     }
     
-    private func setupStackView() {
-        stackView.axis = .vertical
-        stackView.distribution = .fillEqually
-        stackView.alignment = .center
-        stackView.spacing = 10
+}
+
+//MARK: - Setup View
+private extension ViewController {
+    
+    func setupLabel() {
+        let userRandomArray = userRepositary.getBackUserArray().randomElement()
         
-        stackView.addArrangedSubview(textLabel)
-        stackView.addArrangedSubview(batton)
-        stackView.addArrangedSubview(redButton)
-        stackView.addArrangedSubview(greenButton)
+        textLabel.font = .systemFont(ofSize: 25)
+        textLabel.textColor = .white
+        textLabel.textAlignment = .center
+        textLabel.backgroundColor = .blue
+        textLabel.layer.cornerRadius = 10
+        textLabel.clipsToBounds = true
+        textLabel.text = "\(userRandomArray?.userData.fullNameUser ?? "Defaut")"
     }
     
-    private func setupLayout() {
+    func setupStackView() {
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.alignment = .fill
+        stackView.spacing = 10
+        
+        stackView.addArrangedSubviews(textLabel,
+                                      batton,
+                                      redButton,
+                                      greenButton
+        )
+    }
+}
+
+//MARK: - Setup Stack View
+private extension ViewController {
+    
+    func setupLayout() {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         batton.translatesAutoresizingMaskIntoConstraints = false

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		ED15BDF02D023E9A0045C25B /* CustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15BDEF2D023E9A0045C25B /* CustomUIButton.swift */; };
+		ED15BDF22D0B2E7F0045C25B /* Extensions+UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15BDF12D0B2E7F0045C25B /* Extensions+UIStackView.swift */; };
+		ED15BDF42D0B63050045C25B /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED15BDF32D0B63050045C25B /* Extensions+UIView.swift */; };
 		ED9912E32C9F57D7005FC795 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9912E22C9F57D7005FC795 /* Person.swift */; };
 		ED9913292CA89187005FC795 /* UserRepositary.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9913282CA89187005FC795 /* UserRepositary.swift */; };
 		EDBDFFA62C976986003CBD5D /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBDFFA52C976986003CBD5D /* Helper.swift */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		ED15BDEF2D023E9A0045C25B /* CustomUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIButton.swift; sourceTree = "<group>"; };
+		ED15BDF12D0B2E7F0045C25B /* Extensions+UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIStackView.swift"; sourceTree = "<group>"; };
+		ED15BDF32D0B63050045C25B /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		ED9912E22C9F57D7005FC795 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		ED9913282CA89187005FC795 /* UserRepositary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositary.swift; sourceTree = "<group>"; };
 		EDBDFFA52C976986003CBD5D /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -43,6 +47,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED15BDF52D0B70140045C25B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EDC13E412C94BFE600602110 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		ED15BDF62D0B70320045C25B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED15BDF32D0B63050045C25B /* Extensions+UIView.swift */,
+				ED15BDF12D0B2E7F0045C25B /* Extensions+UIStackView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ED15BDF72D0B70760045C25B /* CustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				ED15BDEF2D023E9A0045C25B /* CustomUIButton.swift */,
+			);
+			path = CustomElements;
+			sourceTree = "<group>";
+		};
+		ED15BDF82D0B70B00045C25B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ED9913282CA89187005FC795 /* UserRepositary.swift */,
+				ED9912E22C9F57D7005FC795 /* Person.swift */,
+				EDBDFFA52C976986003CBD5D /* Helper.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ED15BDF92D0B71150045C25B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EDC13E462C94BFE800602110 /* Assets.xcassets */,
+				EDC13E482C94BFE800602110 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		EDC13E312C94BFE600602110 = {
 			isa = PBXGroup;
 			children = (
@@ -64,13 +112,11 @@
 			children = (
 				EDC13E3D2C94BFE600602110 /* AppDelegate.swift */,
 				EDC13E3F2C94BFE600602110 /* SceneDelegate.swift */,
-				EDC13E412C94BFE600602110 /* ViewController.swift */,
-				EDBDFFA52C976986003CBD5D /* Helper.swift */,
-				ED9912E22C9F57D7005FC795 /* Person.swift */,
-				ED15BDEF2D023E9A0045C25B /* CustomUIButton.swift */,
-				ED9913282CA89187005FC795 /* UserRepositary.swift */,
-				EDC13E462C94BFE800602110 /* Assets.xcassets */,
-				EDC13E482C94BFE800602110 /* LaunchScreen.storyboard */,
+				ED15BDF52D0B70140045C25B /* ViewController */,
+				ED15BDF72D0B70760045C25B /* CustomElements */,
+				ED15BDF62D0B70320045C25B /* Extensions */,
+				ED15BDF82D0B70B00045C25B /* Services */,
+				ED15BDF92D0B71150045C25B /* Resources */,
 				EDC13E4B2C94BFE800602110 /* Info.plist */,
 			);
 			path = NewArtemProject;
@@ -147,6 +193,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED9912E32C9F57D7005FC795 /* Person.swift in Sources */,
+				ED15BDF22D0B2E7F0045C25B /* Extensions+UIStackView.swift in Sources */,
+				ED15BDF42D0B63050045C25B /* Extensions+UIView.swift in Sources */,
 				ED15BDF02D023E9A0045C25B /* CustomUIButton.swift in Sources */,
 				EDC13E422C94BFE600602110 /* ViewController.swift in Sources */,
 				EDC13E3E2C94BFE600602110 /* AppDelegate.swift in Sources */,
