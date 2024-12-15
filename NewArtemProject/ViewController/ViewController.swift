@@ -11,9 +11,11 @@ class ViewController: UIViewController {
     
     private let helper = Helper()
     private let userRepositary = UserRepositary()
-    private let textLabel = UILabel()
+    
+    private var textLabel = UILabel()
     private let batton = UIButton()
     private let stackView = UIStackView()
+    
     private var redButton = CustomUIButton(hasShadow: false)
     private var greenButton = CustomUIButton(hasShadow: true)
     
@@ -28,6 +30,7 @@ class ViewController: UIViewController {
         getPrintPerson()
         setupButton()
         setupStackView()
+        addAction()
         
         view.addSubview(stackView)
         setupLayout()
@@ -50,14 +53,32 @@ class ViewController: UIViewController {
         redButton.setTitle("Show New User", for: .normal)
         greenButton.setTitle("Hide User", for: .normal)
         batton.setTitle("Show FullName", for: .normal)
-        batton.backgroundColor = .blue
+        batton.backgroundColor = .brown
         batton.layer.cornerRadius = 10
     }
     
+    @objc
+    private func redButtonTapped() {
+        setupLabel()
+    }
 }
 
 //MARK: - Setup View
 private extension ViewController {
+    
+    func addAction() {
+        redButton.addTarget(self,
+                            action: #selector(redButtonTapped),
+                            for: .touchUpInside
+        )
+        let greenButtonAction = UIAction { _ in
+            if self.textLabel.clipsToBounds {
+                self.textLabel.text = ""
+            }
+           
+        }
+        greenButton.addAction(greenButtonAction, for: .touchUpInside)
+    }
     
     func setupLabel() {
         let userRandomArray = userRepositary.getBackUserArray().randomElement()
@@ -75,7 +96,7 @@ private extension ViewController {
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
         stackView.alignment = .fill
-        stackView.spacing = 10
+        stackView.spacing = 15
         
         stackView.addArrangedSubviews(textLabel,
                                       batton,

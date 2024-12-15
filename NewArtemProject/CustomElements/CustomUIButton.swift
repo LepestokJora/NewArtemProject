@@ -10,12 +10,33 @@ import UIKit
 
 class CustomUIButton: UIButton {
     
-    var hasShadow: Bool
-    
     init(hasShadow: Bool) {
-        self.hasShadow = hasShadow
         super.init(frame: .zero)
-        setupButton()
+        setupButton(hasShadow: hasShadow)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let shadowPatch = UIBezierPath(rect: bounds)
+        layer.shadowPath = shadowPatch.cgPath
+    }
+}
+
+//MARK: - Setup UIButton
+private extension UIButton {
+    
+    
+    func setupButton(hasShadow: Bool) {
+        backgroundColor = .blue
+        setTitleColor(.white, for: .normal)
+        titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        layer.cornerRadius = 10
+        
+        heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         if hasShadow {
             self.layer.shadowColor = UIColor.black.cgColor
@@ -24,28 +45,12 @@ class CustomUIButton: UIButton {
             self.layer.shadowRadius = 10
         }
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-  
 }
 
-//MARK: - Setup UIButton
-extension UIButton {
+//MARK: - Constants
+private extension CustomUIButton {
     
-    func setupButton() {
-        backgroundColor = .blue
-        setTitleColor(.white, for: .normal)
-        titleLabel?.font = UIFont.systemFont(ofSize: 12)
-        layer.cornerRadius = 10
+    enum Constant {
+        static let cornerRadous: CGFloat = 10
     }
-    
-    open override func layoutSubviews() {
-        super.layoutSubviews()
-        let shadowPatch = UIBezierPath(rect: bounds)
-        layer.shadowPath = shadowPatch.cgPath
-    }
-    
 }
